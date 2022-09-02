@@ -60,3 +60,15 @@ function makeSecondList(theTargeted){
     btn.textContent = 'remove'
     btn.addEventListener('click', deleteAct)    
 }
+
+//get the first <h1> element and give it a variable
+//create a function that gets a random combination every one and a half second to change the yaay color randomly
+const div = document.getElementById("intro");
+function getRandomColor() {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
