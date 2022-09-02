@@ -77,4 +77,4 @@ function changeColor(){
     div.style.color= getRandomColor();
   }
   
-  
+setInterval(changeColor,1500); 
