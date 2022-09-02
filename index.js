@@ -93,4 +93,7 @@ function buttonClick() {
     const myArr = []
     const tasks =document.querySelector('#tasks')
     let list = tasks.getElementsByTagName('li');
+    for(let i=0; i<list.length; i++) {
+        myArr.push(list[i].innerText)
+    }
 }
