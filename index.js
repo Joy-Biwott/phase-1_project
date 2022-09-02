@@ -12,3 +12,20 @@ document.addEventListener("DOMContentLoaded", () =>{
         })
         
     })
+
+//define the first form's callback function 
+//on submitting the input, taget it to the <div> section below where it's presented as an ordered list
+//attach a button to each list where the client can delete the input
+//on clicking the button, the callback function deleteAct() is triggered
+function makeTheList(list1){
+    const li = document.createElement('li')
+    const list =document.querySelector('#toDo')
+    const btn = document.createElement('button')
+    const ol = document.querySelector('#tasks')
+    ol.appendChild(li);
+    li.textContent = `${list1 }`
+    li.appendChild(btn);
+    btn.textContent = 'remove'
+    btn.addEventListener('click', deleteAct);
+    
+} 
