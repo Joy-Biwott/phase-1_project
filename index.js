@@ -29,3 +29,8 @@ function makeTheList(list1){
     btn.addEventListener('click', deleteAct);
     
 } 
+
+//deleteAct() is a callback function that on clicking a button, it removes the input it is attached to
+function deleteAct(e){
+    e.target.parentNode.remove();
+}
