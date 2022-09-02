@@ -72,3 +72,9 @@ function getRandomColor() {
     }
     return color;
 }
+
+function changeColor(){
+    div.style.color= getRandomColor();
+  }
+  
+  
