@@ -102,4 +102,9 @@ function buttonClick() {
     for (let y=0; y<otherList.length; y++){
         otherArr.push(otherList[y].innerText)
     }
+    if((myArr.length > 1) && (otherArr.length > 1)){
+        p.textContent = `You had ${myArr.length } good moments and ${otherArr.length } difficult ones today.`
+      }  else if((myArr.length = 1) && (otherArr.length = 1)){
+        p.textContent = `You had only ${myArr.length} great moment and ${otherArr.length} difficult one today.`
+      } 
 }
