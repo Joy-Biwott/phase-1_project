@@ -86,7 +86,7 @@ setInterval(changeColor,1500);
       
 const button = document.getElementById('concButton');
 button.addEventListener('click', buttonClick)
-function buttonClick() {
+async function buttonClick() {
     const div = document.querySelector('#conclusion');
     const p = document.createElement('p')
     div.appendChild(p);
@@ -107,4 +107,24 @@ function buttonClick() {
       }  else if((myArr.length = 1) && (otherArr.length = 1)){
         p.textContent = `You had only ${myArr.length} great moment and ${otherArr.length} difficult one today.`
       } 
+
+//call the fetchData function once the button has been clicked   
+//specifically target the description   
+      const data = await fetchData()
+      console.log(data)
+      const div2 = document.createElement('div')
+      div2.textContent = data.description
+      div.appendChild(div2)
+    }
+
+//define the fetchData function
+//fetch some URL and post it
+//return the data
+async function fetchData(){
+    const data = await fetch('https://aztro.sameerkumar.website/?sign=aries&day=today', {
+        method: 'POST'
+    })
+    const someName = await data.json()
+    return someName
 }
+fetchData()
