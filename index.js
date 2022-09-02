@@ -96,4 +96,10 @@ function buttonClick() {
     for(let i=0; i<list.length; i++) {
         myArr.push(list[i].innerText)
     }
+    const otherArr = []
+    const list2 = document.querySelector('#typed2')
+    let otherList = list2.getElementsByTagName('li');
+    for (let y=0; y<otherList.length; y++){
+        otherArr.push(otherList[y].innerText)
+    }
 }
