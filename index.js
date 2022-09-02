@@ -46,3 +46,17 @@ document.addEventListener('DOMContentLoaded', () => {
         secondForm.reset();
     })
 })
+
+//on submitting the second form, the makeSecondList() function is triggered
+//it creates a list and adds the input in the second list to the <div> element
+//the button attached to each list content triggers the deleteAct() which removes that content
+function makeSecondList(theTargeted){
+    const li = document.createElement('li')
+    const ol = document.getElementById('typed2')
+    li.textContent = `${theTargeted}`
+    ol.appendChild(li);
+    const btn = document.createElement('button')
+    li.appendChild(btn)
+    btn.textContent = 'remove'
+    btn.addEventListener('click', deleteAct)    
+}
