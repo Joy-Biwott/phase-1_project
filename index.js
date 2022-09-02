@@ -86,4 +86,11 @@ setInterval(changeColor,1500);
       
 const button = document.getElementById('concButton');
 button.addEventListener('click', buttonClick)
-      
+function buttonClick() {
+    const div = document.querySelector('#conclusion');
+    const p = document.createElement('p')
+    div.appendChild(p);
+    const myArr = []
+    const tasks =document.querySelector('#tasks')
+    let list = tasks.getElementsByTagName('li');
+}
