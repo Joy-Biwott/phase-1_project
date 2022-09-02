@@ -85,5 +85,5 @@ setInterval(changeColor,1500);
 //give a number after they click of the activities theyve done
       
 const button = document.getElementById('concButton');
-
+button.addEventListener('click', buttonClick)
       
