@@ -34,3 +34,15 @@ function makeTheList(list1){
 function deleteAct(e){
     e.target.parentNode.remove();
 }
+
+//select the 2nd form
+//once the page has loaded, add an event listener to it to submit the input
+//create a callback function to be invoked once form has been submitted
+document.addEventListener('DOMContentLoaded', () => {
+    const secondForm = document.querySelector('#secondForm')
+    secondForm.addEventListener('submit', (sth) => {
+        sth.preventDefault();
+        makeSecondList(sth.target.secondList.value)
+        secondForm.reset();
+    })
+})
