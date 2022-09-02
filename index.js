@@ -78,3 +78,12 @@ function changeColor(){
   }
   
 setInterval(changeColor,1500); 
+
+//once input filled and form submitted, the data goes to the unordered list below
+//operate on the conclusion
+//compile the lists of the person's activities
+//give a number after they click of the activities theyve done
+      
+const button = document.getElementById('concButton');
+
+      
