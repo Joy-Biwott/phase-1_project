@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     const form = document.querySelector('form');    
     form.addEventListener('submit', (e) =>{
             e.preventDefault();
-    
+        
     let theTarget = e.target.myList.value;       
             makeTheList(theTarget);
             form.reset(); 
@@ -110,11 +110,11 @@ async function buttonClick() {
 
 //call the fetchData function once the button has been clicked   
 //specifically target the description   
-      const data = await fetchData()
-      console.log(data)
-      const div2 = document.createElement('div')
-      div2.textContent = data.description
-      div.appendChild(div2)
+    const data = await fetchData()
+    console.log(data)
+    const div2 = document.createElement('div')
+    div2.textContent = data.description
+    div.appendChild(div2)
     }
 
 //define the fetchData function
@@ -127,7 +127,20 @@ async function fetchData(){
     const someName = await data.json()
     return someName
 }
+
+function required(){
+    const selectForm = document.forms["thisForm"]['myList'].value
+    if (selectForm == ""){
+        alert("Please input a Value");
+        return false;
+    } else {
+        alert('value accepted : you can try another');
+        return true;
+    }
+}
+
 fetchData()
+
 
 
 
