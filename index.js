@@ -4,11 +4,16 @@
 document.addEventListener("DOMContentLoaded", () =>{
     const form = document.querySelector('form');    
     form.addEventListener('submit', (e) =>{
+        let theTarget = e.target.myList.value;
+        if(theTarget === ""){
+            alert("input must be filled")
+        } else{
             e.preventDefault();
         
-    let theTarget = e.target.myList.value;       
+           
             makeTheList(theTarget);
             form.reset(); 
+        }
         })
         
     })
@@ -41,9 +46,14 @@ function deleteAct(e){
 document.addEventListener('DOMContentLoaded', () => {
     const secondForm = document.querySelector('#secondForm')
     secondForm.addEventListener('submit', (sth) => {
+        let theTarget = sth.target.secondList.value
+        if(theTarget === ""){
+            alert("input must be filled!")
+        } else{
         sth.preventDefault();
         makeSecondList(sth.target.secondList.value)
         secondForm.reset();
+        }
     })
 })
 
