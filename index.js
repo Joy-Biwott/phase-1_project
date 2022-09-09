@@ -109,7 +109,7 @@ async function buttonClick() {
       } 
 
 //call the fetchData function once the button has been clicked   
-//specifically target the description   
+//specifically target the description.
     const data = await fetchData()
     console.log(data)
     const div2 = document.createElement('div')
