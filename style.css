@@ -79,3 +79,28 @@ form {
     box-shadow: #333;
     box-shadow: 2px 2px 2px ;
   }
+
+  #display-image1 {
+    width: 400px;
+    height: 225px;
+    border: 1px solid black;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .activity {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    background-position: center;
+    margin-left: 100px;
+    margin-right: 200px;
+    box-sizing: content-box;
+    position: relative;
+    margin-left: 50px;
+    box-shadow: #333;
+  }
+
+  .image { 
+    width: 400px;
+  }
