@@ -51,3 +51,6 @@ Thy also get a recommendation of engaging activities that could help them.
 
 # Event listeners
 I have used 3 event listeners; DOMContentLoaded, click and submit
+
+# Project link
+https://joy-biwott.github.io/phase-1_project/
